@@ -1,0 +1,243 @@
+:root {
+  --mainColor: #3b3b3b;
+	--secondaryColor: #8b8b8b;
+
+  --borderColor:#000000;
+
+  --mainText:black;
+  --secondaryText: #4b5156:
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+h1 { font-size: 55px;}
+h2 { font-size: 45px;}
+h3 { font-size: 35px;}
+h4 { font-size: 25px;}
+h5 { font-size: 20px;}
+h6 { font-size: 15px;}
+
+h1, h2, h3, h4, h5, h6, strong {
+  color: var(--mainText);
+  font-family: 'Righteous', cursive;
+}
+
+p, li, span, label, input, textarea {
+  color: var(--mainText);
+  font-family: 'Source Code Pro', monospace;
+}
+
+a {
+  text-decoration: none;
+}
+
+.fa {
+  padding: 5px;
+  font-size: 35px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 20%;
+}
+
+.fa:hover {
+  font-size: 45px;
+}
+
+.fa-github {
+  color: #701b88;
+}
+
+.fa-linkedin {
+  color: #2867B2;
+}
+
+.fa-youtube {
+  color: #FF0000;
+}
+
+.fa-twitter {
+  color: #1DA1F2;
+}
+
+.s1 {
+  background-color: var(--mainColor);
+  border-bottom:1.5px solid var(--borderColor);
+  overflow: auto;
+}
+
+.s2 {
+  background-color: var(--secondaryColor);
+  border-bottom:1.5px solid var(--borderColor);
+  overflow: auto;
+}
+
+.s3 {
+  background-color: var(--mainColor);
+  border-bottom:1.5px solid var(--borderColor);
+  overflow: auto;
+}
+
+.main-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.name-wrapper {
+  display: grid;
+  text-align: center;
+  align-content: center;
+  min-height: 10em;
+}
+
+.intro-wrapper {
+	background-color: var(--secondaryColor);
+	border:1px solid var(--borderColor);
+  border-radius: 5px 5px 0 0;
+
+  -webkit-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+	-moz-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+	box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 3em 30em;
+  grid-template-areas: 
+  "link-wrapper link-wrapper"
+  "left-wrapper right-wrapper"
+  ;
+}
+
+.link-wrapper {
+  background-color: var(--mainColor);
+  border-radius: 5px 5px 0 0;
+  
+  grid-area: link-wrapper;
+  border-bottom: 1px solid var(--borderColor);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.left-wrapper {
+  grid-area: left-wrapper;
+  display: grid;
+  align-content: center
+}
+
+#pfp {
+  display: block;
+  margin: 0 auto;
+  height: 250px;
+  width: 250px;
+  object-fit: cover;
+  border-radius: 20%;
+}
+
+.right-wrapper {
+  grid-area: right-wrapper;
+  display: grid;
+  align-content: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+#intro-shadow {
+  background-color: var(--mainColor);
+  width: 250px;
+  height: 115px;
+  padding-left: 27px;
+  padding-top: 27px;
+}
+
+#intro {
+  width: 250px;
+  border: 1.5px solid var(--borderColor);
+  padding: 15px;
+  position: relative;
+  background-color: rgb(251, 249, 243, 0.8);
+}
+
+.about-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  padding-top: 50px;
+  padding-bottom: 50px;
+  gap: 100px;
+}
+
+#concepts {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgb(251, 249, 243, 0.8);
+}
+
+.github-display-wrapper {
+  display: grid;
+  align-content: center;
+}
+
+#github-pic {
+  width: 100%;
+  border: 2px solid var(--borderColor);
+}
+
+.involvement-title-wrapper {
+  text-align: center;
+}
+
+.involvement-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,320px);
+  gap: 20px;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+
+.item-wrapper {
+  border: 1px solid var(--borderColor);
+  background-color: rgb(251, 249, 243, 0.8);
+  border-radius: 10%;
+}
+
+.item-img {
+  display: block;
+  width: 100%;
+  height: 275px;
+  object-fit: cover;
+  border-radius: 10%;
+}
+
+.item-preview {
+  border-radius: 10%;
+  padding: 10px;
+  
+}
+
+.item-title {
+  margin: 0;
+}
+
+@media screen and (max-width:1200px) {
+  .main-container{
+    width: 95%;
+  }
+}
+
+@media screen and (max-width:800px) {
+  .intro-wrapper {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "link-wrapper"
+    "left-wrapper"
+    "right-wrapper"
+    ;
+  }
+  
+  .right-wrapper {
+    justify-content: center;
+  }
+}
